@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Video Stream</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .video-container {
+            margin: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        video, iframe {
+            width: 640px;
+            height: 480px;
+        }
+        footer {
+            margin-top: auto;
+            padding: 10px;
+            background-color: #f4f4f9;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ESP32 Video Stream Viewer</h1>
+    </header>
+    <main>
+        <div class="video-container">
+            <!-- Use either iframe or video depending on your stream format -->
+            <iframe src="http://192.168.87.90" frameborder="0" allowfullscreen></iframe>
+            <!-- Uncomment the below section for video streams supported by the video tag -->
+            <!-- <video controls autoplay>
+                <source src="http://192.168.87.90" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 ESP32 Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
